@@ -1,0 +1,19 @@
+#menu {
+	height: 2vh;
+	display: flex;
+	padding-top: 4rem;
+}
+
+.menu-item {
+	color: white;
+	font-size: clamp(1rem, 6vw, 2rem);
+	font-family: "Roboto", sans-serif;
+
+	display: block;
+	text-decoration: none;
+	padding: clamp(0.5rem, 0.5vw, 1rem) 0rem;
+}
+
+#menu-items{
+	margin-left: clamp(1.8rem, 10rem, 1rem);
+}

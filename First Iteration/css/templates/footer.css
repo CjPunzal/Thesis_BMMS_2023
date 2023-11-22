@@ -1,0 +1,105 @@
+body:not([data-footer="true"]) > #footer-toggle > .o-idle {opacity: 1; transition: opacity; transition-timing-function: ease-in-out; transition-duration: 200ms;}
+body:not([data-footer="true"]) > #footer-toggle:hover > .o-hover {opacity: 1;}
+body:not([data-footer="true"]) > #footer-border {opacity: 1;}
+
+body[data-footer="true"] > #footer-toggle > .c-idle {opacity: 1; transition: opacity; transition-timing-function: ease-in-out; transition-duration: 200ms;}
+body[data-footer="true"] > #footer-toggle:hover > .c-hover {opacity: 1;}
+body[data-footer="true"] > #footer-sections {opacity: 1; bottom: 0px;}
+
+#footer-toggle {
+  position: fixed;
+  width: 0px;
+  height: 0px;
+  right: 50px;
+  bottom: 35px;
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 5rem;
+  border: none;
+}
+
+#open {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+}
+
+#close {
+  position: absolute;
+  left: -300%;
+  top: -1400%;
+  transform: translate(-100%,-100%);
+  opacity: 0;
+  transition: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+
+  transform: rotate(-45deg);
+}
+
+#open:active {
+  transform: scale(0.5);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  transition: opacity, transform;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}
+
+#close:active {
+  transform: scale(0.8);
+  transition: opacity, transform;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}
+
+#footer-border {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  bottom: 0px;
+  height: 19px;
+  z-index: 3;
+  background: rgba(242, 233, 4, 0.2);
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+}
+
+#footer-sections {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  bottom: -19rem;
+  height: 265px;
+
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  border-top: 19px solid rgba(242, 233, 4, 0.85);
+  opacity: 1;
+  z-index: 4;
+  transition-timing-function: cubic-bezier(0, 0, 0, 1);
+  transition-duration: 300ms;
+}
+
+#footer-sections > .foot-section {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 50%;
+	padding: 2rem 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+#footer-sections > .foot-mission-section h1 {
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 50px;
+}
